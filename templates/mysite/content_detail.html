@@ -2,6 +2,9 @@
 {% block content %}
 <h2>{{ content_list.title }}</h2>
 <div>
+    {% if content_list.image %}
+        <img class="img-fluid" src="{{ content_list.image.url }}" alt="{{ content_list.title }}">
+    {% endif %}
     {{ content_list.content }}
 </div>
 <section class="mb-5">
